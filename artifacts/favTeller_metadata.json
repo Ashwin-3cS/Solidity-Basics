@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.8.8+commit.dddeac2f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favNum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_food",
+						"type": "string"
+					}
+				],
+				"name": "addDetails",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "friends",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favnum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "food",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"arrays.sol": "favTeller"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"arrays.sol": {
+			"keccak256": "0xe5c3dc0724239805437be6a2ee45495b1f962502195445755dfea81d6c657ff5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9275a9750a73480c773529dee661f28e0bcac66445ac334de2cd07429729bbf1",
+				"dweb:/ipfs/QmNvnHL4jPJLCfFbYn68vnEUD65sXA6jsxc6cjwC7h56VX"
+			]
+		}
+	},
+	"version": 1
+}
