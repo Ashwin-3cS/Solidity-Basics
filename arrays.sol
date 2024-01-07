@@ -3,6 +3,9 @@
 pragma solidity ^ 0.8.8;
 
 contract favTeller{
+    uint256 usn;
+    string clgName;
+    string studentName;
     
     struct Friends{
         uint256 favnum;
@@ -18,47 +21,23 @@ contract favTeller{
         friends.push(Friends({favnum: _favNum, name: _name, food: _food}));
 
     }
+
+
+
+// Just more practise no relation with the above arrays and struct code , but the variables are declared globally above the  structure.
+    function store(uint256 _enterusnNum ,  string memory _enterclgName,string memory _enterstudentName) public{
+        usn=_enterusnNum;
+        clgName= _enterclgName;
+        studentName=_enterstudentName;
+    }
+
+    function showTheNum()public view returns(uint256){
+        return usn;
+    }
+    function showTheclgName()public view returns (string memory){
+        return clgName;
+    }
+    function showTheName() public view returns (string memory ){
+        return studentName;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // function store(uint256 _enterFavnum ,  string memory _enterName,string memory _enterFood) public{
-    //     favNum=_enterFavnum;
-    //     Name= _enterName;
-    //     Food=_enterFood;
-
-
-    // }
-
-    // function showTheNum()public view returns(uint256){
-    //     return favNum;
-    // }
-    // function showTheName()public view returns (string memory){
-    //     return Name;
-    // }
-    // function showTheFood() public view returns (string memory ){
-    //     return Food;
-    // }
-// }
