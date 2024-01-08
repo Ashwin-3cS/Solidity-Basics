@@ -16,6 +16,8 @@ contract favTeller{
 
     Friends[] public friends;//friends is an array of  Friends(i.e) struct 
 
+
+
     function addDetails(uint256 _favNum, string memory _name,string memory _food) public{
         
         friends.push(Friends({favnum: _favNum, name: _name, food: _food}));
