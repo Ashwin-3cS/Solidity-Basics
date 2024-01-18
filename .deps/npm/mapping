@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using Terser v5.3.5.
+ * Original file: /npm/mapping@0.2.0/lib/mapping.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+(function(){var n=[].indexOf||function(n){for(var t=0,e=this.length;t<e;t++)if(t in this&&this[t]===n)return t;return-1};module.exports=function(){var t;return t=Object.create(null),{get:function(n){return t["~"+n]},set:function(n,e){return t["~"+n]=e},delete:function(n){return delete t["~"+n]},keys:function(){var n,e;for(n in e=[],t)t[n],e.push(n.slice(1));return e},values:function(){var n,e,r;for(n in r=[],t)e=t[n],r.push(e);return r},hasKey:function(t){return n.call(this.keys(),t)>=0},hasValue:function(t){return n.call(this.values(),t)>=0},size:function(){return this.keys().length},map:function(n){var e,r,u;for(e in u=[],t)r=t[e],u.push(n(e.slice(1),r));return u}}}}).call(this);
+//# sourceMappingURL=/sm/71aac87f871de7c978bae43faa6d926544268688a8e1181e69389a5d6f7d7eca.map

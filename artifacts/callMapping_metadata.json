@@ -1,0 +1,80 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "MaptestArray",
+				"outputs": [
+					{
+						"internalType": "contract maptest",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "callMap",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"justContactAnotherContract.sol": "callMapping"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"justContactAnotherContract.sol": {
+			"keccak256": "0xa887975e76ae8cd51609fc64f309c87bbf722081c47622b6e2363c20525585be",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b1f48467412af16cfe06eba8d65e3ceba07c045d2617f163a7646bc5aae02968",
+				"dweb:/ipfs/QmddTuHkwnt1NzNbF144aNEAwigLatvayPee62EBEZXoWW"
+			]
+		},
+		"mapping.sol": {
+			"keccak256": "0xe7ee5047ca30f5abe22c64b6f4b1675b53112a89ed2b488ea58618b5731c90fc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a46b0c63d2b6ed3f0a1a822d9d9fcd1454506493f968e332c263116a070357d0",
+				"dweb:/ipfs/QmdZ6AuzHdn575x3tivYZfnxmDuBN5PppySKtsyCB1sytg"
+			]
+		}
+	},
+	"version": 1
+}
