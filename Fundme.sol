@@ -1,5 +1,5 @@
 //SPDX-License-Identifier:MIT
-pragma solidity 0.8.8;
+pragma solidity ^ 0.8.8;
 
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import "./PriceConverter.sol";
@@ -20,6 +20,24 @@ contract FundMe{
         //1eth = 1000000000000000000 (18 decimal places)
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender]=msg.value;
+    }
+
+    function withdraw() public {
+        //for loop 
+        //[1,2,3,4] using indexing 
+        //syntax
+        //for(starting index , ending index , step amount )
+        for(uint256 funderIndex=0;funderIndex < funders.length;funderIndex=funderIndex+1 /* or we can use this for incrementation   funderIndex++ */){
+
+            address funder = funders[funderIndex];
+            addressToAmountFunded[funder]=0;
+
+        }
+
+        //reset the array
+        funders = new  address[](0); //completly new address Array without any object ; completly starting as a complete new blank array
+
+        
     }
 
     
