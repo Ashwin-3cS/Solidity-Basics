@@ -37,8 +37,28 @@ contract FundMe{
         //reset the array
         funders = new  address[](0); //completly new address Array without any object ; completly starting as a complete new blank array
 
-        
+        //sending currency to contracts from each other
+
+        //transfer //these are three different ways to send native currency 
+        //send
+        //call
+
+        //transfer 
+
+        //msg.sender=address
+        //payable(msg.sender)=payable address // only this is used for paying currency
+       payable (msg.sender).transfer(address(this).balance);// if it fails it will revert the transaction 
+
+       //send
+       bool sendSuccess=payable(msg.sender).send(address(this).balance);
+        require (sendSuccess,"SEnd Failed");// using send keyword we can send the whole balance ;if it succeeds okay; if not we can see a message "send failed" returns a boolean or the string that we tell it to display if the conditon doesnt satisfy 
+        //call its powerfull 
+       (bool callSuccess , )=payable(msg.sender).call{value:address(this).balance}("");/* the function that i need to get called can be entered */ 
+        require (callSuccess,"call Failed");
+  //callmethod is the very used part 
     }
+
+
 
     
     }
