@@ -12,6 +12,13 @@ contract FundMe{
     // This line declares a public variable minimumUsd of type uint256 and initializes it with the value of 50 Ether converted to Wei (Wei is the smallest unit of Ether, and 1e18 represents 1 Ether in Wei). This variable represents the minimum amount of Ether in USD required for funding.
     address[] public funders;
     mapping( address => uint256 )public addressToAmountFunded;
+    
+    address public owner;
+
+    //using constructor
+    constructor(){
+        owner=msg.sender;
+    }
 
     function fund()public payable {
         require(msg.value.getConversionRate()>=minimumUsd,"did'nt send enough eth");
@@ -22,7 +29,13 @@ contract FundMe{
         addressToAmountFunded[msg.sender]=msg.value;
     }
 
-    function withdraw() public {
+    function withdraw() public onlyOwner {
+        //check whether owner is withdraing ,if not throws an error owner is the one who deploys the contract
+        // what if we have requirements that more than one person is a owner and they should withdraw here comes modifier 
+
+        /*require(msg.sender==owner, "Sender is not owner"); */
+
+
         //for loop 
         //[1,2,3,4] using indexing 
         //syntax
@@ -56,9 +69,17 @@ contract FundMe{
        (bool callSuccess , )=payable(msg.sender).call{value:address(this).balance}("");/* the function that i need to get called can be entered */ 
         require (callSuccess,"call Failed");
   //callmethod is the very used part 
+
+
+
+
+
     }
 
-
+    modifier onlyOwner{
+        require(msg.sender==owner,"sender is not owner!");
+        _; // this :_ tells that first check the require then check the code in withdraw function; if you see in withdraw function we have used the onlyOwner modifier ; first it checks the require then the code; if the _: is at top then the code will be checked first then the require statement
+    }
 
     
     }
