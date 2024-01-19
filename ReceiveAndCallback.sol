@@ -13,4 +13,4 @@ contract FallbackExample{
     fallback()external payable {
         result =2;
     }
-}
+}    // if data is sended along with the transaction it will trigger the fallback() if not transaction takes place without no data also sended along with it then ,it will trigger the receive()
