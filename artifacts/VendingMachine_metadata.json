@@ -1,0 +1,58 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "Unauthorized",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"customError.sol": "VendingMachine"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"customError.sol": {
+			"keccak256": "0x199d9eed6b32a75c931892709f391b3b3a189755e2d5b49b426bb120017dc6dd",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6cad33e4b7b2de7332f25a28e8a9edb7326eafb011746c7efc4d43e73440113e",
+				"dweb:/ipfs/Qme9wMXDoCYgqKHQmKWrBrR3kk8HD9Fs9MgEoD95sn1fhu"
+			]
+		}
+	},
+	"version": 1
+}
