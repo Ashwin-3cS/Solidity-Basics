@@ -81,5 +81,14 @@ contract FundMe{
         _; // this :_ tells that first check the require then check the code in withdraw function; if you see in withdraw function we have used the onlyOwner modifier ; first it checks the require then the code; if the _: is at top then the code will be checked first then the require statement
     }
 
+
+    receive () external payable {
+        fund();
+    }
+
+    fallback()external payable {
+        fund();
+    }
+
     
     }
